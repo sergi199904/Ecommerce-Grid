@@ -1,0 +1,98 @@
+/*Estilo para el body*/
+body{ font-family: 'Roboto', sans-serif;}
+
+/*Estilos para el header */
+header {
+    background-color:#395B64;
+    grid-area: header;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: sticky;
+    padding: 10px;
+    color: white;
+    top: 0;}
+
+/*Estilos para la barra lateral*/
+aside {grid-area: aside;
+background-color:#E7F6F2;
+display: flex;
+flex-direction: column;
+
+}
+
+aside h2{color: #2C3333;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+padding: 10px;}
+
+aside p{text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: gray;
+    padding: 15px;}
+
+aside p:hover {
+
+    text-decoration: none;
+    color: #6b103e;}
+
+
+/*estilos para componer layout de grid*/
+main{display: grid;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header header header"
+                         "aside section section"
+                         "footer footer footer";
+    grid-template-columns: 200px auto auto;
+    grid-template-rows: 50px auto 40px;}
+    
+/*Estilos seccion de productos*/
+section {grid-area: section;
+    background-color:#cccccc;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px;}
+
+section > article{display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+section article > div:nth-child(1)>img{height:100%;
+    width:100%;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/*Estilos para los botones de compra*/
+.boton{margin-top:10px;}
+
+A{
+    border-radius: 0;
+    background-color: darkcyan;
+    padding: 0px 50px 5px;
+    color: azure;
+}
+
+A:hover{
+    background-color: #395B64;
+}
+
+A:focus{
+    background-color: gray;
+}
+
+/*estilo para el footer*/
+footer {grid-area: footer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+background-color:#A5C9CA;}
